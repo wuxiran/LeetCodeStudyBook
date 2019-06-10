@@ -3,7 +3,7 @@ package com.wxr.LeetCode03LongestSubstringWithoutREpeadingCharacter;
 import java.util.HashMap;
 import java.util.Map;
 
-public class Solution2 {
+public class Solution02 {
     public int lengthOfLongestSubstring(String s) {
         int n = s.length(), ans = 0;
         Map<Character, Integer> map = new HashMap<>(); // current index of character
@@ -20,8 +20,8 @@ public class Solution2 {
 
     public static void main(String[] args) {
 
-        Solution2 solution2 = new Solution2();
-        solution2.lengthOfLongestSubstring("abba");
+        Solution02 solution02 = new Solution02();
+        solution02.lengthOfLongestSubstring("abba");
 
     }
 }

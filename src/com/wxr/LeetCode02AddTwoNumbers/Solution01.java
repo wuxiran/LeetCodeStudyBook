@@ -7,6 +7,7 @@ public class Solution01 {
     public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
         ListNode dummyHead = new ListNode(0);
         ListNode p = l1, q = l2, curr = dummyHead;
+        /*carry为进位*/
         int carry = 0;
         while (p != null || q != null) {
             int x = (p != null) ? p.val : 0;

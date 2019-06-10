@@ -7,6 +7,7 @@ import java.util.Set;
 
 public class Solution01 {
 
+    /*两遍哈希法*/
     public int[] twoSum(int[] nums, int target) {
 
         int[] result = new int[2];
