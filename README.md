@@ -39,6 +39,32 @@
 1. 记住各个算法的基本的时间复杂度比如这个 O(log(m + n))。什么算法的时间复杂度是这个。
 
 
+#### 八，字符串转数组
+
+##### 解法一 
+
+我的解法就比较蠢，用了hashmap来存储0～9  然后一次遍历，循环判断来解决，这个时候对于边界的条件处理很弱。同时还要丢进数组里面
+
+##### 解法二
+
+两个指针，第一个指针指向字符串的开始，第二个指针指向字符串的结束。如果不是数字，那么第二个指针肯定小于第一个指针，这样就能很方便的求出答案
+
+        //判断溢出可以学习
+     if (negative) {
+                    //这里判断溢出的情况和第7题一样
+                    if (ret < Integer.MIN_VALUE / 10 || ret == Integer.MIN_VALUE / 10 && cur > 8) {
+                        return Integer.MIN_VALUE;
+                    }
+                    ret = ret * 10 - cur;
+                } else {
+                    if (ret > Integer.MAX_VALUE / 10 || ret == Integer.MAX_VALUE / 10 && cur > 7) {
+                        return Integer.MAX_VALUE;
+                    }
+                    ret = ret * 10 + cur;
+                }
+     }           
+
+
 #### 二十八,可以用KMP算法实现
 
 1. 但是要注意一些判空条件
